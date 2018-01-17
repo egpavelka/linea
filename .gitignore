@@ -1,0 +1,5 @@
+# hide api key
+secrets.py
+__pycache__/
+env/
+linea.egg-info/
