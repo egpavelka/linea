@@ -44,15 +44,15 @@ def print_lang_direction(tr_from, tr_to):
     click.secho(str, dim=True)
 
 
-def print_translation(entry_num, text, pos='', syn=[], mean=[], ex=[]):
-    synonym_line = click.style(entry_num + '   ', dim=True)
+def print_translation(entry_num, text, pos='', gen='', syn=[], mean=[], ex=[]):
+    synonym_line = click.style(entry_num + '  ', bold=True, dim=True)
     # tr[..]['text'] and tr[..]['syn'][..]['text'] belong on the same
     # line, separated by commas, so add former to latter array
     syn.insert(0,{'text': text, 'pos': pos})
     synonym_line += style_syn(syn)
     click.echo(synonym_line)
     if mean:
-        meaning_line = '    '
+        meaning_line = '   '
         meaning_line += style_mean(mean)
         click.echo(meaning_line)
     if ex:
