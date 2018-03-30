@@ -6,9 +6,7 @@ setup(
     py_modules=['app'],
     install_requires=[
         'Click',
-        'Requests',
-        'python-vlc',
-        'xmltodict',
+        'Requests'
         ],
     entry_points='''
         [console_scripts]
