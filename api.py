@@ -20,7 +20,7 @@ def get_definition(text, tr_from='', tr_to='en'):
         lang = translation['lang']
     response = call_dictionary(text, lang)
     if 'def' in response and response['def']:
-        format_dictionary(response, tr_to, tr_from)
+        format_dictionary(response, tr_from, tr_to)
     else:
         p_tr_to = LANG_CODES[tr_to]
         p_tr_from = LANG_CODES[tr_from]
@@ -53,5 +53,5 @@ def generate_header(dfn):
     header = {}
     for key,val in dfn.items():
         if isinstance(val,str):
-            header[key] = val + ' '
+            header[key] = val
     return header

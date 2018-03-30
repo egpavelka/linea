@@ -35,7 +35,7 @@ def print_entry_header(text, pos='', gen='', ts=''):
     if pos:
         header_line += style_pos(pos)
     if gen:
-        header_line += style_gen(' ' + gen)
+        header_line += style_gen(gen)
     click.echo(header_line)
 
 
@@ -64,7 +64,7 @@ def style_pos(pos):
     return ' - ' + click.style(pos, fg='cyan')
 
 def style_gen(gen):
-    return click.style('(' + gen + ')', dim=True)
+    return click.style(' (' + gen + ')', dim=True)
 
 def style_ts(ts):
     return click.style('[' + ts + ']', dim=True)
